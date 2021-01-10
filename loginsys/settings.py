@@ -78,8 +78,8 @@ WSGI_APPLICATION = 'loginsys.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'djangologin',
-        'USER':'root',
+        'NAME': 'dbname',
+        'USER':'',
         'PASSWORD':'',
         'HOST':'localhost',
         'PORT':'3306',
