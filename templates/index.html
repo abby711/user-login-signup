@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+      .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.button4 {border-radius: 12px;}
+.asap{
+  border-style: solid;
+  border-color: green;
+}
+</style>
+   </head>
+    <body>
+      <br>
+      <br>
+      <br>
+      <div class="w3-container">
+      <div class="w3-panel w3-card-2 w3-yellow" align="center">
+        <br><br><br><br><br><br>
+     <h1>Index page</h1>
+     {% if request.session.email %}
+     {{ request.session.email }} &nbsp; <button onclick="location.href='{% url 'logout' %}'" class="button button4">&nbsp;LOG OUT&nbsp;</button>
+
+     {% else %}
+
+     <button onclick="location.href='{% url 'reg' %}'" class="button button4">REGISTER</button>
+     <button onclick="location.href='{% url 'login' %}'" class="button button4">&nbsp;LOGIN&nbsp;</button>
+
+     {% endif %}
+     <br>
+     <br>
+     <br><br><br><br><br><br>
+     </div>
+     </div>
+
+   </body>
+ </html>
